@@ -9,9 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 75002377931caad408b065ed2e69db8d
+  - enabled: 1
     path: Assets/Scenes/Base.unity
     guid: 13eca80b6eb16614c896154b247c4b02
   - enabled: 1
     path: Assets/Scenes/Fight.unity
     guid: 8cc8bd078e14cce46bdd512179999362
+  - enabled: 1
+    path: Assets/Scenes/Platformor.unity
+    guid: c87790e65672a124b92dc8436b1fd925
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: 2168b0e0b3cfe8b49afedf04451bf708
+  - enabled: 1
+    path: Assets/Scenes/victory.unity
+    guid: 5ad3f308f08cdf1409d8e095f61faa7c
   m_configObjects: {}

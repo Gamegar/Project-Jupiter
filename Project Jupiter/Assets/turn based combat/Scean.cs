@@ -13,9 +13,14 @@ public class Scean : MonoBehaviour
             Random random = new Random();
             int randomNumber = Random.Range(0, 100);
 
-            if (randomNumber < 5)
+            if (randomNumber <= 5)
             {
                 SceneManager.LoadScene(newLeve);
+
+            }
+
+            else
+            {
 
             }
 

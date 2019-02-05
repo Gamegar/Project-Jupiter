@@ -20,7 +20,7 @@ public GameObject FloatingTextPrefab;
     // Use this for initialization
     void Start() {
         direction = Vector2.up;
-
+        
 
 
 
