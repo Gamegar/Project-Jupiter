@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClassesPlayer {
+public class BaseCharacterClass
+{
     private string characterClassName;
 
     private string characterClassDescription;
