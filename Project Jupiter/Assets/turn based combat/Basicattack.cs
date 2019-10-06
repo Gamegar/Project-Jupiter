@@ -11,10 +11,6 @@ public class Basicattack : MonoBehaviour
     {
      
 
-         enemy1.GetComponent<BStats>().health -= damage;
-         enemy2.GetComponent<BStats>().health -= damage;
-         enemy3.GetComponent<BStats>().health -= damage;
-         enemy4.GetComponent<BStats>().health -= damage;
     }
   
 }
