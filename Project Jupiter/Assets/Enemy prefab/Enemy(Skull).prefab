@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4492958525755588}
   - component: {fileID: 212216498976836396}
   - component: {fileID: 2983523793091039301}
+  - component: {fileID: 8424091879932086231}
   m_Layer: 0
   m_Name: Enemy(Skull)
   m_TagString: enemy
@@ -92,4 +93,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a490bc7304f4b4aae874057a7bedbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TheName: Skull
+  curHP: 1
+  baseHP: 3
+  baseMP: 1
+  curMP: 3
+  BaseAttack: 1
+  Curattack: 1
+  BaseDefence: 3
+  CurDefence: 3
   health: 2
+--- !u!114 &8424091879932086231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309978377391602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a9f867e85f3284a9138765522a9366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 8424091879932086231}
+  currentState: 0
+  HeroToAttack: {fileID: 6243850147010535120, guid: c96dac4189f75d2408ded8cbeb9bd6d8,
+    type: 3}
