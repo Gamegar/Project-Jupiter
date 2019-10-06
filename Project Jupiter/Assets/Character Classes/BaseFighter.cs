@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseFighter : ClassesPlayer
+public class BaseFighter : BaseCharacterClass
 {
-    public void FighterClass()
+    public  BaseFighter()
     {
         CharacterClassNames = "Fighter";
         CharacterClassDescription = "Balanced frontline fighter";
