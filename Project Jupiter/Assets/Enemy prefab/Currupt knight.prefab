@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4459996745741976}
   - component: {fileID: 212086036193598624}
   - component: {fileID: 2765658591886687826}
+  - component: {fileID: 439926732812444537}
   m_Layer: 0
   m_Name: Currupt knight
   m_TagString: enemy
@@ -92,4 +93,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a490bc7304f4b4aae874057a7bedbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TheName: Corruptknight
+  curHP: 5
+  baseHP: 5
+  baseMP: 3
+  curMP: 3
+  BaseAttack: 2
+  Curattack: 2
+  BaseDefence: 0
+  CurDefence: 0
   health: 4
+--- !u!114 &439926732812444537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003577581885164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a9f867e85f3284a9138765522a9366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 439926732812444537}
+  currentState: 0
+  HeroToAttack: {fileID: 6243850147010535120, guid: c96dac4189f75d2408ded8cbeb9bd6d8,
+    type: 3}
