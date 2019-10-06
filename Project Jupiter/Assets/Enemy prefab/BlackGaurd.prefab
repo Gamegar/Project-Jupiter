@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4330134743460766}
   - component: {fileID: 212961329360994902}
   - component: {fileID: 1072402195728490103}
-  - component: {fileID: 6013970744602413500}
+  - component: {fileID: 1570445179083837813}
   m_Layer: 0
   m_Name: BlackGaurd
   m_TagString: enemy
@@ -93,25 +93,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a490bc7304f4b4aae874057a7bedbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TheName: BlackGaurd
+  curHP: 3
+  baseHP: 3
+  baseMP: 0
+  curMP: 0
+  BaseAttack: 2
+  Curattack: 2
+  BaseDefence: 1
+  CurDefence: 1
   health: 5
---- !u!50 &6013970744602413500
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &1570445179083837813
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871121756460826}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a9f867e85f3284a9138765522a9366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1570445179083837813}
+  currentState: 0
+  HeroToAttack: {fileID: 6243850147010535120, guid: c96dac4189f75d2408ded8cbeb9bd6d8,
+    type: 3}
