@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[System.Serializable]
 
-public class BaseCleric : ClassesPlayer
+public class BaseCleric : BaseCharacterClass
 {
-    public  BaseCleric()
+
+
+    
+
+        
+    public BaseCleric()
     {
-        CharacterClassNames = "Cleric";
-        CharacterClassDescription = "A Sturdy healer";
+        CharacterClassNames = "Rouge";
+        CharacterClassDescription = "A subtle specialist";
         Constitution = 14;
         Strength = 14;
         Dextarity = 10;
@@ -16,4 +22,7 @@ public class BaseCleric : ClassesPlayer
         Charisma = 10;
     }
 
+   
 }
+    
+
