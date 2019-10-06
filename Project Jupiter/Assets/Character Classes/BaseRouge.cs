@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseRouge : ClassesPlayer
+public class BaseRouge : BaseCharacterClass
 {
     public  BaseRouge()
     {
