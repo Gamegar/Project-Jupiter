@@ -8,9 +8,10 @@ public class Scean : MonoBehaviour
     [SerializeField] private string newLeve;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             Random random = new Random();
+
             int randomNumber = Random.Range(0, 100);
 
             if (randomNumber <= 5)
@@ -19,13 +20,12 @@ public class Scean : MonoBehaviour
 
             }
 
-            else
+        else
             {
 
             }
 
-           
-            Debug.Log("erro");
+       
         }
     }
 
