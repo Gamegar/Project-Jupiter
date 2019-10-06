@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseWizard : ClassesPlayer
+public class BaseWizard : BaseCharacterClass
 {
 
-    public void WizardClass()
+    public  BaseWizard()
     {
         CharacterClassNames = "Wizard";
         CharacterClassDescription = "Squish caster";
