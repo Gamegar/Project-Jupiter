@@ -61,12 +61,35 @@ public class CreateNewCharacter : MonoBehaviour
             newPlayer.Wisdom = newPlayer.PlayerClass.Wisdom;
             newPlayer.Charisma = newPlayer.PlayerClass.Charisma;
             newPlayer.PlayerName = playerName;
-
+            StoreNewPlayerInfo();
+            SaveInformation.SaveAllInformation();
             Debug.Log("Player Name: " + newPlayer.PlayerName);
             Debug.Log("player Class: " + newPlayer.PlayerClass.CharacterClassNames);
             Debug.Log("player Level: " + newPlayer.PlayerLevel);
             Debug.Log("player Con: " + newPlayer.PlayerClass.Constitution);
+           
 
         }
+
+        if (GUILayout.Button("Load"))
+        {
+            LoadInformation.LoadAllInformation();
+            Debug.Log("Player Name Load: " + GameInformation.PlayerName);
+            
+        }
+    }
+
+
+
+    private void StoreNewPlayerInfo()
+    {
+        GameInformation.PlayerName = newPlayer.PlayerName;
+        GameInformation.PlayerLevel =  newPlayer.PlayerLevel;
+        GameInformation.Strength = newPlayer.Strength;
+        GameInformation.Dextarity = newPlayer.Dextarity;
+        GameInformation.Constitution = newPlayer.Constitution;
+        GameInformation.Intelegence = newPlayer.Intelegence;
+        GameInformation.Wisdom = newPlayer.Wisdom;
+        GameInformation.Charisma = newPlayer.Charisma;
     }
 }

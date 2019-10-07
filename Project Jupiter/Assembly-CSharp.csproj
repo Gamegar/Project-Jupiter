@@ -10,7 +10,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{DD22F0F2-79EE-0317-BE42-39572A5B51D0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -74,7 +75,6 @@
     <Compile Include="Assets\Character Classes\BaseRouge.cs" />
     <Compile Include="Assets\Character Classes\BaseWizard.cs" />
     <Compile Include="Assets\Character Classes\CreateNewCharacter.cs" />
-    <Compile Include="Assets\Character Classes\GameInformation.cs" />
     <Compile Include="Assets\Character Classes\Items\BaseEquipment.cs" />
     <Compile Include="Assets\Character Classes\Items\BaseItem.cs" />
     <Compile Include="Assets\Character Classes\Items\BaseScroll.cs" />
@@ -82,6 +82,10 @@
     <Compile Include="Assets\Character Classes\Items\BaseWeapon.cs" />
     <Compile Include="Assets\Character Classes\Items\CreateNewEquipment.cs" />
     <Compile Include="Assets\Character Classes\Items\CreateNewWeapon.cs" />
+    <Compile Include="Assets\Character Classes\Items\ItemDataBase.cs" />
+    <Compile Include="Assets\Character Classes\SaveLoad\GameInformation.cs" />
+    <Compile Include="Assets\Character Classes\SaveLoad\LoadInformation.cs" />
+    <Compile Include="Assets\Character Classes\SaveLoad\SaveInformation.cs" />
     <Compile Include="Assets\Death scripts\DeathScrean.cs" />
     <Compile Include="Assets\turn based combat\Ability1.cs" />
     <Compile Include="Assets\turn based combat\Aoutput.cs" />
@@ -103,6 +107,9 @@
     <Compile Include="Assets\turn based combat\State machines\Turns.cs" />
     <None Include="Assets\read me.txt" />
     <None Include="Assets\Medieval_pixel_art_asset_FREE\pixel_snapping_README.txt" />
+    <None Include="Assets\Character Classes\Items\ItemDatabase.xml">
+      <SubType>Designer</SubType>
+    </None>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/scary/Documents/GitHub/Project-Jupiter - Copy/Project Jupiter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
