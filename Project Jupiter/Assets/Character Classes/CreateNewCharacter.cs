@@ -74,7 +74,7 @@ public class CreateNewCharacter : MonoBehaviour
         if (GUILayout.Button("Load"))
         {
             LoadInformation.LoadAllInformation();
-            Debug.Log("Player Name Load: " + GameInformation.PlayerName);
+            Debug.Log("Player Name Load: " + Gameinfo.PlayerName);
             
         }
     }
@@ -83,13 +83,13 @@ public class CreateNewCharacter : MonoBehaviour
 
     private void StoreNewPlayerInfo()
     {
-        GameInformation.PlayerName = newPlayer.PlayerName;
-        GameInformation.PlayerLevel =  newPlayer.PlayerLevel;
-        GameInformation.Strength = newPlayer.Strength;
-        GameInformation.Dextarity = newPlayer.Dextarity;
-        GameInformation.Constitution = newPlayer.Constitution;
-        GameInformation.Intelegence = newPlayer.Intelegence;
-        GameInformation.Wisdom = newPlayer.Wisdom;
-        GameInformation.Charisma = newPlayer.Charisma;
+        Gameinfo.PlayerName = newPlayer.PlayerName;
+        Gameinfo.PlayerLevel =  newPlayer.PlayerLevel;
+        Gameinfo.Strength = newPlayer.Strength;
+        Gameinfo.Dextarity = newPlayer.Dextarity;
+        Gameinfo.Constitution = newPlayer.Constitution;
+        Gameinfo.Intelegence = newPlayer.Intelegence;
+        Gameinfo.Wisdom = newPlayer.Wisdom;
+        Gameinfo.Charisma = newPlayer.Charisma;
     }
 }

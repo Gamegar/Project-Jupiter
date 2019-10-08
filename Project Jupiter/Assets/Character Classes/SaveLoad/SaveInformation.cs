@@ -10,15 +10,15 @@ public class SaveInformation
     public static void SaveAllInformation()
     {
 
-        PlayerPrefs.SetInt("PLAYERLEVEL", GameInformation.PlayerLevel);
-        PlayerPrefs.SetString("PLAYERNAME", GameInformation.PlayerName);
-        PlayerPrefs.SetInt("STRENGTH", GameInformation.Strength);
-        PlayerPrefs.SetInt("Dextarity", GameInformation.Dextarity);
-        PlayerPrefs.SetInt("CONSTITUTION", GameInformation.Constitution);
-        PlayerPrefs.SetInt("INTELEGENCE", GameInformation.Intelegence);
+        PlayerPrefs.SetInt("PLAYERLEVEL", Gameinfo.PlayerLevel);
+        PlayerPrefs.SetString("PLAYERNAME", Gameinfo.PlayerName);
+        PlayerPrefs.SetInt("STRENGTH", Gameinfo.Strength);
+        PlayerPrefs.SetInt("Dextarity", Gameinfo.Dextarity);
+        PlayerPrefs.SetInt("CONSTITUTION", Gameinfo.Constitution);
+        PlayerPrefs.SetInt("INTELEGENCE", Gameinfo.Intelegence);
 
-        PlayerPrefs.SetInt("WISDOM", GameInformation.Wisdom);
-        PlayerPrefs.SetInt("CHARISMA", GameInformation.Charisma);
+        PlayerPrefs.SetInt("WISDOM", Gameinfo.Wisdom);
+        PlayerPrefs.SetInt("CHARISMA", Gameinfo.Charisma);
         Debug.Log("SAVED ALL");
     }
 

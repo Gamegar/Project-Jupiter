@@ -75,6 +75,7 @@
     <Compile Include="Assets\Character Classes\BaseRouge.cs" />
     <Compile Include="Assets\Character Classes\BaseWizard.cs" />
     <Compile Include="Assets\Character Classes\CreateNewCharacter.cs" />
+    <Compile Include="Assets\Character Classes\GameInformation.cs" />
     <Compile Include="Assets\Character Classes\Items\BaseEquipment.cs" />
     <Compile Include="Assets\Character Classes\Items\BaseItem.cs" />
     <Compile Include="Assets\Character Classes\Items\BaseScroll.cs" />
@@ -83,7 +84,7 @@
     <Compile Include="Assets\Character Classes\Items\CreateNewEquipment.cs" />
     <Compile Include="Assets\Character Classes\Items\CreateNewWeapon.cs" />
     <Compile Include="Assets\Character Classes\Items\ItemDataBase.cs" />
-    <Compile Include="Assets\Character Classes\SaveLoad\GameInformation.cs" />
+    <Compile Include="Assets\Character Classes\SaveLoad\Gameinfo.cs" />
     <Compile Include="Assets\Character Classes\SaveLoad\LoadInformation.cs" />
     <Compile Include="Assets\Character Classes\SaveLoad\SaveInformation.cs" />
     <Compile Include="Assets\Death scripts\DeathScrean.cs" />

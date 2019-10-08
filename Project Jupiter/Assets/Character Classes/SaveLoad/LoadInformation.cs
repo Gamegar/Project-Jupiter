@@ -6,14 +6,14 @@ public class LoadInformation : MonoBehaviour
 {
    public static void LoadAllInformation()
     {
-        GameInformation.PlayerName = PlayerPrefs.GetString("PLAYERNAME");
-        GameInformation.PlayerLevel = PlayerPrefs.GetInt("PLAYERLEVEL");
-        GameInformation.Strength = PlayerPrefs.GetInt("STRENGTH");
-        GameInformation.Dextarity = PlayerPrefs.GetInt("Dextarity");
-        GameInformation.Constitution = PlayerPrefs.GetInt("CONSTITUTION");
-        GameInformation.Intelegence = PlayerPrefs.GetInt("INTELEGENCE");
-        GameInformation.Wisdom = PlayerPrefs.GetInt("WISDOM");
-        GameInformation.Charisma = PlayerPrefs.GetInt("CHARISMA");
+        Gameinfo.PlayerName = PlayerPrefs.GetString("PLAYERNAME");
+        Gameinfo.PlayerLevel = PlayerPrefs.GetInt("PLAYERLEVEL");
+        Gameinfo.Strength = PlayerPrefs.GetInt("STRENGTH");
+        Gameinfo.Dextarity = PlayerPrefs.GetInt("Dextarity");
+        Gameinfo.Constitution = PlayerPrefs.GetInt("CONSTITUTION");
+        Gameinfo.Intelegence = PlayerPrefs.GetInt("INTELEGENCE");
+        Gameinfo.Wisdom = PlayerPrefs.GetInt("WISDOM");
+        Gameinfo.Charisma = PlayerPrefs.GetInt("CHARISMA");
         
 
     }
