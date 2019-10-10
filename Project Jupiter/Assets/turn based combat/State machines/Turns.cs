@@ -29,6 +29,8 @@ public class Turns : MonoBehaviour
     public Image ProgressBar;
     public GameObject Selector;
 
+    
+
     //IeNumerator
     public GameObject EnemyToAttack;
     private bool actionStarted=false;
@@ -38,7 +40,7 @@ public class Turns : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
-        cur_cooldown = Random.Range(0, 2.5f);
+        cur_cooldown = Random.Range(0.1f, 2.5f);
         Selector.SetActive(false);
         BSM = GameObject.Find("BattleManager").GetComponent<BattleStateMachine>();
         currentState = TurnState.PROCESSING;
@@ -51,8 +53,10 @@ public class Turns : MonoBehaviour
         switch (currentState)
         {
             case (TurnState.PROCESSING):
-       
-                UpgradeProgressBar();
+              
+
+                    UpgradeProgressBar();
+                
 
                 break;
 
@@ -73,12 +77,6 @@ public class Turns : MonoBehaviour
                 break;
 
 
-            case (TurnState.SELECTION):
-                break;
-
-
-
-
 
             case (TurnState.ACTION):
 
@@ -87,6 +85,10 @@ public class Turns : MonoBehaviour
 
                 break;
 
+ case (TurnState.SELECTION):
+                
+                
+                break;
 
 
 
@@ -134,15 +136,24 @@ public class Turns : MonoBehaviour
         //remove attacing enemy
         BSM.performList.RemoveAt(0);
         //resets BSM
-        BSM.BattleStates = BattleStateMachine.PreformAction.WAIT;
+       BSM.BattleStates = BattleStateMachine.PreformAction.WAIT;
         //end BMS
         actionStarted = false;
         cur_cooldown = 0f;
         max_cooldown = 6f;
         currentState = TurnState.PROCESSING;
+       
     }
     private bool MoveTowardsEnemy(Vector3 target)
     {
         return target != (transform.position = Vector3.MoveTowards(transform.position, target, animSpeed * Time.deltaTime));
     }
+
+    private bool MoveTowardStart(Vector3 target)
+    {
+
+        return target != (transform.position = Vector3.MoveTowards(transform.position, target, animSpeed * Time.deltaTime));
+
+    }
+
 }

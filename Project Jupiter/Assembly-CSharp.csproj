@@ -10,8 +10,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{DD22F0F2-79EE-0317-BE42-39572A5B51D0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -106,11 +105,11 @@
     <Compile Include="Assets\turn based combat\Spawning\EnemySpawn2.cs" />
     <Compile Include="Assets\turn based combat\State machines\BattleStateMachine.cs" />
     <Compile Include="Assets\turn based combat\State machines\Turns.cs" />
+    <Compile Include="Assets\turn based combat\Type 2\BattleStateStart.cs" />
+    <Compile Include="Assets\turn based combat\Type 2\TurnBasedCombatStateMachine.cs" />
     <None Include="Assets\read me.txt" />
     <None Include="Assets\Medieval_pixel_art_asset_FREE\pixel_snapping_README.txt" />
-    <None Include="Assets\Character Classes\Items\ItemDatabase.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\Character Classes\Items\ItemDatabase.xml" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/scary/Documents/GitHub/Project-Jupiter - Copy/Project Jupiter/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

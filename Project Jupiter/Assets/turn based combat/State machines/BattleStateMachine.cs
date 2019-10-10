@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class BattleStateMachine : MonoBehaviour
 {
-   
-     
 
-    public enum PreformAction {
-        WAIT,TAKEFACTION,PERFORMACTION
+
+
+    public enum PreformAction
+    {
+        WAIT, TAKEFACTION, PERFORMACTION
     }
     public PreformAction BattleStates;
 
@@ -19,11 +20,17 @@ public class BattleStateMachine : MonoBehaviour
 
     public List<GameObject> EnemiesInBattle = new List<GameObject>();
 
+    //ienume
+    public GameObject EnemyToAttack;
+    private bool actionStarted = false;
+    private Vector3 StartPosition;
+    private float animSpeed = 10f;
+
 
     public enum heroGUI
     {
 
-        ACTIVE,WAITING,INPUT1,INPUT2,DONE
+        ACTIVE, WAITING, INPUT1, INPUT2, DONE
 
     }
 
@@ -39,10 +46,12 @@ public class BattleStateMachine : MonoBehaviour
     public GameObject AttackPanel;
     public GameObject EnemySelectPanel;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
-
+        StartPosition = transform.position;
         BattleStates = PreformAction.WAIT;
         EnemiesInBattle.AddRange(GameObject.FindGameObjectsWithTag("enemy"));
         HerosInGame.AddRange(GameObject.FindGameObjectsWithTag("Player"));
@@ -56,10 +65,17 @@ public class BattleStateMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (BattleStates) {
+        switch (BattleStates)
+        {
             case (PreformAction.WAIT):
-                if (performList.Count > 0) {
+                if (performList.Count > 0)
+                {
+                    
                     BattleStates = PreformAction.TAKEFACTION;
+                }
+                if (performList.Count == 0)
+                {
+                HerosInGame.AddRange(GameObject.FindGameObjectsWithTag("Player"));
                 }
 
                 break;
@@ -67,7 +83,8 @@ public class BattleStateMachine : MonoBehaviour
             case (PreformAction.TAKEFACTION):
 
                 GameObject performer = GameObject.Find(performList[0].Attacker);
-                if (performList[0].Type == "enemy") {
+                if (performList[0].Type == "enemy")
+                {
                     enemyattack EAK = performer.GetComponent<enemyattack>();
                     EAK.HeroToAttack = performList[0].AttackersTarget;
                     EAK.currentState = enemyattack.TurnState.ACTION;
@@ -75,32 +92,37 @@ public class BattleStateMachine : MonoBehaviour
 
                 }
 
-                if (performList[0].Type == "Hero") {
+                if (performList[0].Type == "Hero")
+                {
                     Turns TU = performer.GetComponent<Turns>();
                     TU.EnemyToAttack = performList[0].AttackersTarget;
-                    TU.currentState = Turns.TurnState.ACTION;
+                    TU.currentState = Turns.TurnState.ACTION; 
+                    
+
+
                 }
                 BattleStates = PreformAction.PERFORMACTION;
                 break;
 
             case (PreformAction.PERFORMACTION):
 
-                
+
                 break;
         }
-        
+
         switch (HeroInput)
         {
-            case(heroGUI.ACTIVE):
-                
-                if (HerosToManage.Count > 0) {
+            case (heroGUI.ACTIVE):
+
+                if (HerosToManage.Count > 0)
+                {
 
                     HerosToManage[0].transform.Find("Selector").gameObject.SetActive(true);
                     AttackPanel.SetActive(true);
-                 HeroChoice = new HandelTurns();
+                    HeroChoice = new HandelTurns();
                     HeroInput = heroGUI.WAITING;
-                   
-                   
+
+
                 }
 
                 break;
@@ -123,12 +145,12 @@ public class BattleStateMachine : MonoBehaviour
 
         }
 
-        }
+    }
 
     public void CollectActions(HandelTurns input)
     {
 
-       performList.Add(input);
+        performList.Add(input);
 
     }
 
@@ -139,20 +161,21 @@ public class BattleStateMachine : MonoBehaviour
 
             GameObject newButton = Instantiate(EnemyButton) as GameObject;
 
-           EnemySelectButton  button = newButton.GetComponent<EnemySelectButton>();
+            EnemySelectButton button = newButton.GetComponent<EnemySelectButton>();
 
             enemyattack cur_enemy = enemy.GetComponent<enemyattack>();
 
-           Text buttonText = newButton.transform.Find("Text").gameObject.GetComponent<Text>();
-           buttonText.text = cur_enemy.enemy.name;
+            Text buttonText = newButton.transform.Find("Text").gameObject.GetComponent<Text>();
+            buttonText.text = cur_enemy.enemy.name;
 
-           button.enemyPreFab = enemy;
-           newButton.transform.SetParent(Spacer,false);
+            button.enemyPreFab = enemy;
+            newButton.transform.SetParent(Spacer, false);
         }
 
     }
 
-    public void Input1() {
+    public void Input1()
+    {
 
         HeroChoice.Attacker = HerosToManage[0].name;
 
@@ -166,20 +189,27 @@ public class BattleStateMachine : MonoBehaviour
 
     }
 
-    public void Input2(GameObject choosenEnemy) {
+    public void Input2(GameObject choosenEnemy)
+    {
 
         HeroChoice.AttackersTarget = choosenEnemy;
         HeroInput = heroGUI.DONE;
     }
-    void HeroInputDone() {
-
+    void HeroInputDone()
+    {
         performList.Add(HeroChoice);
         EnemySelectPanel.SetActive(false);
-        
-       // HerosToManage[0].transform.Find("Selector").gameObject.SetActive(false);
-    
+        HerosToManage[0].transform.Find("Selector").gameObject.SetActive(false);
         HerosToManage.RemoveAt(0);
+        HerosInGame.RemoveRange(0, 0);
+        HeroInput = heroGUI.ACTIVE;
+        BattleStates = PreformAction.WAIT;
         
-        
+
+
+
     }
+
+    
+
 }
