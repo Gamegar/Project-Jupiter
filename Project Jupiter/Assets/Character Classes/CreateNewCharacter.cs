@@ -53,15 +53,7 @@ public class CreateNewCharacter : MonoBehaviour
                 newPlayer.PlayerClass = new BaseCleric();
             }
 
-            newPlayer.PlayerLevel = 1;
-            newPlayer.Strength = newPlayer.PlayerClass.Strength;
-            newPlayer.Dextarity = newPlayer.PlayerClass.Dextarity;
-            newPlayer.Constitution = newPlayer.PlayerClass.Constitution;
-            newPlayer.Intelegence = newPlayer.PlayerClass.Intelegence;
-            newPlayer.Wisdom = newPlayer.PlayerClass.Wisdom;
-            newPlayer.Charisma = newPlayer.PlayerClass.Charisma;
-            newPlayer.PlayerName = playerName;
-            StoreNewPlayerInfo();
+            
             SaveInformation.SaveAllInformation();
             Debug.Log("Player Name: " + newPlayer.PlayerName);
             Debug.Log("player Class: " + newPlayer.PlayerClass.CharacterClassNames);
@@ -91,5 +83,21 @@ public class CreateNewCharacter : MonoBehaviour
         Gameinfo.Intelegence = newPlayer.Intelegence;
         Gameinfo.Wisdom = newPlayer.Wisdom;
         Gameinfo.Charisma = newPlayer.Charisma;
+        GameInformation.gold = newPlayer.Gold;
     }
+    private void CreateNewPlayer()
+    {
+        newPlayer.PlayerLevel = 1;
+        newPlayer.Strength = newPlayer.PlayerClass.Strength;
+        newPlayer.Dextarity = newPlayer.PlayerClass.Dextarity;
+        newPlayer.Constitution = newPlayer.PlayerClass.Constitution;
+        newPlayer.Intelegence = newPlayer.PlayerClass.Intelegence;
+        newPlayer.Wisdom = newPlayer.PlayerClass.Wisdom;
+        newPlayer.Charisma = newPlayer.PlayerClass.Charisma;
+        newPlayer.PlayerName = playerName;
+        newPlayer.Gold = 10;
+        StoreNewPlayerInfo();
+
+    }
+
 }

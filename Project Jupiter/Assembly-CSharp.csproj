@@ -74,7 +74,7 @@
     <Compile Include="Assets\Character Classes\BaseRouge.cs" />
     <Compile Include="Assets\Character Classes\BaseWizard.cs" />
     <Compile Include="Assets\Character Classes\CreateNewCharacter.cs" />
-    <Compile Include="Assets\Character Classes\GameInformation.cs" />
+    <Compile Include="Assets\Character Classes\IncreasesExperience.cs" />
     <Compile Include="Assets\Character Classes\Items\BaseEquipment.cs" />
     <Compile Include="Assets\Character Classes\Items\BaseItem.cs" />
     <Compile Include="Assets\Character Classes\Items\BaseScroll.cs" />
@@ -83,10 +83,15 @@
     <Compile Include="Assets\Character Classes\Items\CreateNewEquipment.cs" />
     <Compile Include="Assets\Character Classes\Items\CreateNewWeapon.cs" />
     <Compile Include="Assets\Character Classes\Items\ItemDataBase.cs" />
+    <Compile Include="Assets\Character Classes\LevelUp.cs" />
     <Compile Include="Assets\Character Classes\SaveLoad\Gameinfo.cs" />
     <Compile Include="Assets\Character Classes\SaveLoad\LoadInformation.cs" />
     <Compile Include="Assets\Character Classes\SaveLoad\SaveInformation.cs" />
     <Compile Include="Assets\Death scripts\DeathScrean.cs" />
+    <Compile Include="Assets\Saveload\GameInformation.cs" />
+    <Compile Include="Assets\Saveload\PPSerialization.cs" />
+    <Compile Include="Assets\Scean.cs" />
+    <Compile Include="Assets\Scenes\Sceans.cs" />
     <Compile Include="Assets\turn based combat\Ability1.cs" />
     <Compile Include="Assets\turn based combat\Aoutput.cs" />
     <Compile Include="Assets\turn based combat\Attacks\Abilitys1.cs" />
@@ -99,10 +104,8 @@
     <Compile Include="Assets\turn based combat\enemyattack.cs" />
     <Compile Include="Assets\turn based combat\HandelTurns.cs" />
     <Compile Include="Assets\turn based combat\Platform.cs" />
-    <Compile Include="Assets\turn based combat\Scean.cs" />
-    <Compile Include="Assets\turn based combat\Sceans.cs" />
-    <Compile Include="Assets\turn based combat\Spawning.cs" />
     <Compile Include="Assets\turn based combat\Spawning\EnemySpawn2.cs" />
+    <Compile Include="Assets\turn based combat\Spawning\Spawning.cs" />
     <Compile Include="Assets\turn based combat\State machines\BattleStateMachine.cs" />
     <Compile Include="Assets\turn based combat\State machines\Turns.cs" />
     <Compile Include="Assets\turn based combat\Type 2\BattleStateStart.cs" />

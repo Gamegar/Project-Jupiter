@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class BattleStateMachine : MonoBehaviour
 {
-
+    private bool hasAddedExp = false;
 
 
     public enum PreformAction
     {
-        WAIT, TAKEFACTION, PERFORMACTION
+        WAIT, TAKEFACTION, PERFORMACTION, VICTORY
     }
     public PreformAction BattleStates;
 
@@ -70,12 +70,12 @@ public class BattleStateMachine : MonoBehaviour
             case (PreformAction.WAIT):
                 if (performList.Count > 0)
                 {
-                    
+
                     BattleStates = PreformAction.TAKEFACTION;
                 }
                 if (performList.Count == 0)
                 {
-                HerosInGame.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+                    HerosInGame.AddRange(GameObject.FindGameObjectsWithTag("Player"));
                 }
 
                 break;
@@ -96,8 +96,8 @@ public class BattleStateMachine : MonoBehaviour
                 {
                     Turns TU = performer.GetComponent<Turns>();
                     TU.EnemyToAttack = performList[0].AttackersTarget;
-                    TU.currentState = Turns.TurnState.ACTION; 
-                    
+                    TU.currentState = Turns.TurnState.ACTION;
+
 
 
                 }
@@ -107,6 +107,14 @@ public class BattleStateMachine : MonoBehaviour
             case (PreformAction.PERFORMACTION):
 
 
+                break;
+
+            case (PreformAction.VICTORY):
+                if (!hasAddedExp)
+                {
+                    IncreasesExperience.AddExperience();
+                    hasAddedExp = true;
+                }
                 break;
         }
 
@@ -142,7 +150,7 @@ public class BattleStateMachine : MonoBehaviour
 
                 break;
 
-
+            
         }
 
     }
@@ -204,12 +212,12 @@ public class BattleStateMachine : MonoBehaviour
         HerosInGame.RemoveRange(0, 0);
         HeroInput = heroGUI.ACTIVE;
         BattleStates = PreformAction.WAIT;
-        
+
 
 
 
     }
 
-    
+   
 
 }

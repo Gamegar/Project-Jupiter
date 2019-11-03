@@ -14,7 +14,12 @@ public class LoadInformation : MonoBehaviour
         Gameinfo.Intelegence = PlayerPrefs.GetInt("INTELEGENCE");
         Gameinfo.Wisdom = PlayerPrefs.GetInt("WISDOM");
         Gameinfo.Charisma = PlayerPrefs.GetInt("CHARISMA");
-        
+        GameInformation.gold = PlayerPrefs.GetInt("GOLD");
+
+        if (PlayerPrefs.GetString("EquipmentItem1") != null) {
+
+            GameInformation.EquipmentOne = (BaseEquipment)PPSerialization.Load("EquipmentItem1");
+        }
 
     }
 }
