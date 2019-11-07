@@ -16,6 +16,6 @@ public class Baseclass : MonoBehaviour
     public float BaseDefence;
     public float CurDefence;
 
-   
+    public List<BaseAttack> attacks = new List<BaseAttack>(); 
    
 }

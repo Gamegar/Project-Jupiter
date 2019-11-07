@@ -10,4 +10,7 @@ public class HandelTurns
     public string Type;
     public GameObject AttacksGameObject; //who is attacker
     public GameObject AttackersTarget; // is attacked
+
+
+    public BaseAttack chossenAttack;
 }

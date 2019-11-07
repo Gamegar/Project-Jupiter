@@ -114,6 +114,8 @@ public class enemyattack : MonoBehaviour
         myAttack.Attacker = enemy.name;
         myAttack.AttacksGameObject = this.gameObject;
         myAttack.AttackersTarget = BSM.HerosInGame[Random.Range(0, BSM.HerosInGame.Count)];
+
+        myAttack.chossenAttack = enemy.Attacks;
         BSM.CollectActions(myAttack);
         myAttack.Type = "enemy";
     }
@@ -146,5 +148,12 @@ public class enemyattack : MonoBehaviour
     }
     private bool MoveTowardsEnemy(Vector3 target) {
         return target!=(transform.position=Vector3.MoveTowards(transform.position,target,animSpeed*Time.deltaTime));
+    }
+
+    void DoDamage()
+    {
+        float calcDmg = enemy.Curattack + BSM.performList[0].chossenAttack.attackDamage;
+        HeroToAttack.GetComponent<Turns> ().TakeDamage(calcDmg);
+
     }
 }

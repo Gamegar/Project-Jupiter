@@ -19,6 +19,7 @@ public class GameInformation : MonoBehaviour
     public static int Intelegence { get; set; }
     public static int Wisdom { get; set; }
     public static int Charisma { get; set; }
+    public static int HP { get; set; }
     public static int CurrentExp { get; set; }
     public static int RequiredExp { get; set; }
     public static int gold { get; set; }

@@ -15,6 +15,7 @@ public class BaseCharacterClass :MonoBehaviour
     private int charisma;
     private int strength;
     private int wisdom;
+    private int hp;
 
     public string CharacterClassNames
     {
@@ -56,4 +57,11 @@ public class BaseCharacterClass :MonoBehaviour
         get { return charisma; }
         set { charisma = value; }
     }
+    public int HP
+    {
+        get { return hp; }
+        set { hp = value; }
+    }
+
+    public List<BaseAttack> attacks = new List<BaseAttack>();
 }

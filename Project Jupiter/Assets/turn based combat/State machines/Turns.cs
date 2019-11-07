@@ -155,5 +155,13 @@ public class Turns : MonoBehaviour
         return target != (transform.position = Vector3.MoveTowards(transform.position, target, animSpeed * Time.deltaTime));
 
     }
+    public void TakeDamage(float getDamageAmount)
+    {
+
+        -= getDamageAmount;
+        if (<=0) {
+            currentState = TurnState.DEAD;
+        }
+    }
 
 }

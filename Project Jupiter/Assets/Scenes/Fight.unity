@@ -274,6 +274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e7a385289a3cc4f95bae1ebaab0d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attacks:
+  - {fileID: 2038041005760723851, guid: b1b035d41a507f54ca3b3fd4152c122a, type: 3}
 --- !u!1 &73529259
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,6 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e922d391f4f8df64882c2c1e64714060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attacks: []
 --- !u!1 &482994225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,6 +1101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e922d391f4f8df64882c2c1e64714060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attacks: []
 --- !u!1 &750926260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3919,10 +3923,12 @@ MonoBehaviour:
     Type: 
     AttacksGameObject: {fileID: 0}
     AttackersTarget: {fileID: 0}
+    chossenAttack: {fileID: 0}
   - Attacker: 
     Type: 
     AttacksGameObject: {fileID: 0}
     AttackersTarget: {fileID: 0}
+    chossenAttack: {fileID: 0}
   HerosInGame: []
   EnemiesInBattle: []
   EnemyToAttack: {fileID: 0}

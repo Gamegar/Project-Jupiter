@@ -19,6 +19,7 @@ public class SaveInformation
         PlayerPrefs.SetInt("GOLD", GameInformation.gold);
         PlayerPrefs.SetInt("WISDOM", Gameinfo.Wisdom);
         PlayerPrefs.SetInt("CHARISMA", Gameinfo.Charisma);
+        PlayerPrefs.SetInt("HP", Gameinfo.HP);
         if (GameInformation.EquipmentOne != null)
         {
             PPSerialization.Save("EquipmentItem1", GameInformation.EquipmentOne);

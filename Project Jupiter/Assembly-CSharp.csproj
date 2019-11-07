@@ -95,11 +95,12 @@
     <Compile Include="Assets\turn based combat\Ability1.cs" />
     <Compile Include="Assets\turn based combat\Aoutput.cs" />
     <Compile Include="Assets\turn based combat\Attacks\Abilitys1.cs" />
+    <Compile Include="Assets\turn based combat\Attacks\BaseAttack.cs" />
     <Compile Include="Assets\turn based combat\Attacks\Close.cs" />
     <Compile Include="Assets\turn based combat\Attacks\EC.cs" />
     <Compile Include="Assets\turn based combat\Attacks\EnemySelectButton.cs" />
     <Compile Include="Assets\turn based combat\Attacks\Flee.cs" />
-    <Compile Include="Assets\turn based combat\Basicattack.cs" />
+    <Compile Include="Assets\turn based combat\Attacks\Slash.cs" />
     <Compile Include="Assets\turn based combat\Battle Start.cs" />
     <Compile Include="Assets\turn based combat\enemyattack.cs" />
     <Compile Include="Assets\turn based combat\HandelTurns.cs" />
