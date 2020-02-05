@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Turns : MonoBehaviour
 {
     private BattleStateMachine BSM;
     public BasePlayer Cler;
-    //naming and calling a base class
+    public BaseCharacterClass bcc;
 
+    
+    //naming and calling a base class
+    public GameObject ButtonDeath;
         public enum TurnState
     {
         PROCESSING,
@@ -95,6 +99,9 @@ public class Turns : MonoBehaviour
 
 
             case (TurnState.DEAD):
+
+              
+                
                 break;
 
                     }
@@ -125,6 +132,7 @@ public class Turns : MonoBehaviour
         Vector3 enemyPosition = new Vector3(EnemyToAttack.transform.position.x + 1.5f, EnemyToAttack.transform.position.y, EnemyToAttack.transform.position.z);
         while (MoveTowardsEnemy(enemyPosition))
         {
+
             yield return null;
         }
 
@@ -147,6 +155,7 @@ public class Turns : MonoBehaviour
     private bool MoveTowardsEnemy(Vector3 target)
     {
         return target != (transform.position = Vector3.MoveTowards(transform.position, target, animSpeed * Time.deltaTime));
+
     }
 
     private bool MoveTowardStart(Vector3 target)
@@ -155,11 +164,12 @@ public class Turns : MonoBehaviour
         return target != (transform.position = Vector3.MoveTowards(transform.position, target, animSpeed * Time.deltaTime));
 
     }
-    public void TakeDamage(float getDamageAmount)
+    public void TakeDamage(int getDamageAmount)
     {
+      
 
-        -= getDamageAmount;
-        if (<=0) {
+       bcc.HP = bcc.HP - getDamageAmount;
+        if (bcc.HP<=0) {
             currentState = TurnState.DEAD;
         }
     }

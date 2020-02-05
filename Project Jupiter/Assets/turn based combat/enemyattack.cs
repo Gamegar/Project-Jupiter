@@ -6,8 +6,9 @@ public class enemyattack : MonoBehaviour
 {
 
     private BattleStateMachine BSM;
-
+    public BStats Stats;
     public enemyattack enemy;
+    private HandelTurns Hand;
     public enum TurnState
     {
         PROCESSING,
@@ -114,10 +115,11 @@ public class enemyattack : MonoBehaviour
         myAttack.Attacker = enemy.name;
         myAttack.AttacksGameObject = this.gameObject;
         myAttack.AttackersTarget = BSM.HerosInGame[Random.Range(0, BSM.HerosInGame.Count)];
-
-        myAttack.chossenAttack = enemy.Attacks;
+Slash slup = new Slash();
+        myAttack.chossenAttack = slup;
         BSM.CollectActions(myAttack);
         myAttack.Type = "enemy";
+        
     }
     private IEnumerator TimeForAction()
     {
@@ -152,8 +154,9 @@ public class enemyattack : MonoBehaviour
 
     void DoDamage()
     {
-        float calcDmg = enemy.Curattack + BSM.performList[0].chossenAttack.attackDamage;
+        int calcDmg = Stats.BaseAttack + BSM.performList[0].chossenAttack.attackDamage;
         HeroToAttack.GetComponent<Turns> ().TakeDamage(calcDmg);
+
 
     }
 }

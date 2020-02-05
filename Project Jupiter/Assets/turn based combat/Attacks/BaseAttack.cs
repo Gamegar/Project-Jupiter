@@ -6,9 +6,9 @@ public class BaseAttack : MonoBehaviour
 {
     public string attackName;
 
-    public float attackDamage;//base dmg = 5 +(lv*str)
+    public int attackDamage;//base dmg = 5 +(lv*str)
 
-    public float attackCost;//for spells and abilities (MP)
+    public int attackCost;//for spells and abilities (MP)
 
 
 }

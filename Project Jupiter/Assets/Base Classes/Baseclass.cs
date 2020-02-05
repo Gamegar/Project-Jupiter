@@ -11,8 +11,8 @@ public class Baseclass : MonoBehaviour
     
     public float baseMP;
     public float curMP;
-    public float BaseAttack;
-    public float Curattack;
+    public int BaseAttack;
+    public int Curattack;
     public float BaseDefence;
     public float CurDefence;
 

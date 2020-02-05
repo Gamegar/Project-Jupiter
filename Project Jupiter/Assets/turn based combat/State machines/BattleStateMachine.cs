@@ -96,6 +96,9 @@ public class BattleStateMachine : MonoBehaviour
                 {
                     Turns TU = performer.GetComponent<Turns>();
                     TU.EnemyToAttack = performList[0].AttackersTarget;
+
+                    EnemiesInBattle.Remove(EnemyToAttack);
+                   // EnemyToAttack.SetActive(false);
                     TU.currentState = Turns.TurnState.ACTION;
 
 
@@ -178,6 +181,7 @@ public class BattleStateMachine : MonoBehaviour
 
             button.enemyPreFab = enemy;
             newButton.transform.SetParent(Spacer, false);
+
         }
 
     }
@@ -195,12 +199,15 @@ public class BattleStateMachine : MonoBehaviour
         AttackPanel.SetActive(false);
         EnemySelectPanel.SetActive(true);
 
+        
+
     }
 
     public void Input2(GameObject choosenEnemy)
     {
 
         HeroChoice.AttackersTarget = choosenEnemy;
+        
         HeroInput = heroGUI.DONE;
     }
     void HeroInputDone()
@@ -210,9 +217,11 @@ public class BattleStateMachine : MonoBehaviour
         HerosToManage[0].transform.Find("Selector").gameObject.SetActive(false);
         HerosToManage.RemoveAt(0);
         HerosInGame.RemoveRange(0, 0);
+
         HeroInput = heroGUI.ACTIVE;
         BattleStates = PreformAction.WAIT;
 
+        
 
 
 
